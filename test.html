@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width:8rem;
+        background-color:rgb(73, 71, 71,.5);
+        border-radius: 5rem;
+       position: fixed;
+
+    }
+    .mybtn{
+        cursor: pointer;
+    }
+    img:hover{
+        background-color: antiquewhite;
+    }
+    .body{
+        height: 250rem;
+        /* background-color: bisque; */
+    }
+</style>
+<body>
+    <img id="top"src="https://monophy.com/media/kOZl0a9pNn4Lyvg94d/monophy.gif" alt="">
+    <div class="body">hello</div>
+    <div class="mybtn">
+   
+    </div>
+</body>
+<script>
+    const mybtn = document.getElementById('top');
+    window.onscroll = function(){scrollFunction()};
+    function scrollFunction(){
+        if(document.body.scrollTop > 100 || document.documentElement.scrollTop >100){
+            mybtn.style.display = "block";
+        }
+        else{
+            mybtn.style.display = "none";
+        }
+    }
+    mybtn.addEventListener('click',()=>{
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop=0;
+    })
+</script>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+  .container-blue{
+    padding: 3rem;
+    background-color: #0e8ce4;
+    border-radius: 1rem;
+    box-shadow: 0rem 1rem 1rem grey;
+}
+.contact_form {
+    padding-top: 85px;
+}
+
+
+
+.contact_form_title {
+    font-size: 2rem;
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: bold;
+    margin-bottom: 37px;
+    color: whitesmoke;
+}
+
+.contact_form_inputs {
+    margin-bottom: 30px;
+}
+
+.input_field {
+    width: calc((100% - 60px) / 3);
+    height: 50px;
+    padding-left: 25px;
+    border: solid 1px #e5e5e5;
+    border-radius: 5px;
+    outline: none;
+    color: #0e8ce4;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.input_field:focus,
+.text_field:focus {
+    border-color: #b2b2b2;
+}
+
+.input_field:hover,
+.text_field:hover {
+    border-color: #b2b2b2;
+}
+
+.input_field::-webkit-input-placeholder,
+.text_field::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field:-moz-placeholder,
+.text_field:-moz-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field::-moz-placeholder,
+.text_field::-moz-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field:-ms-input-placeholder,
+.text_field:-ms-input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field::input-placeholder,
+.text_field::input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.text_field {
+    width: 100%;
+    height: 160px;
+    padding-left: 25px;
+    padding-top: 15px;
+    border: solid 1px #e5e5e5;
+    border-radius: 5px;
+    color: gray;
+    outline: none;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.contact_submit_button {
+    
+    color:white;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 24px;
+    background-color: #ff4c68;
+    border-radius: 3rem;
+}
+
+.panel {
+    width: 100%;
+    height: 50px;
+    background: #fafafa;
+    margin-top: 120px;
+}
+
+
+@media only screen and (max-width: 991px) {
+
+    .contact_info_item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .contact_info_item:last-child {
+        margin-bottom: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .input_field {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .input_field:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+
+    .contact_submit_button {
+        font-size: 13px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
+.contact_form_button{
+    /* background-color:green; */
+    font-family: 'Encode Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@900&family=Montserrat:wght@100&family=Ubuntu&display=swap');
+
+</style>
+
+<body>
+    <div class="contact_form">
+        <div class="container container-blue">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="contact_form_container">
+                        <div class="contact_form_title">Get in Touch</div>
+
+                        <form onsubmit=" sendEmail(); reset(); return false;" id="contact_form">
+                            <div
+                                class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                                <input type="text" id="name" class="contact_form_name input_field"
+                                    placeholder="Your name" required="required" data-error="Name is required.">
+                                <input type="text" id="email" class="contact_form_email input_field"
+                                    placeholder="Your email" required="required" data-error="Email is required.">
+                                <input type="text" id="phone" class="contact_form_phone input_field"
+                                    placeholder="Your phone number">
+                            </div>
+                            <div class="contact_form_text">
+                                <textarea id="message" class="text_field contact_form_message" name="message" rows="4"
+                                    placeholder="Message" required="required"
+                                    data-error="Please, write us a message."></textarea>
+                            </div>
+                            <div class="contact_form_button">
+                                <button type="submit" class="button btn contact_submit_button">Send Message</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel"></div>
+    </div>
+
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/08b1e9fa97.js" crossorigin="anonymous"></script>
+<script>
+    function sendEmail() {
+    Email.send({
+        Host: "jadhavjay586@gmail.com",
+        Username: "Manny.c",
+        Password: "jay@123456789$",
+        To: 'jadhavjay586@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "New Contact From Enquiry",
+        Body: "Name: " + document.getElementById("name").value +
+            "<br>Email: " + document.getElementById("email").value
+            + "<br> Phone no: " + document.getElementById("phone").value
+            + "<br> Message: " + document.getElementById("message").value
+    }).then(
+        message => alert("Message Sent Successfully")
+    );
+}
+</script>
+</html>
