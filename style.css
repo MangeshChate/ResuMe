@@ -15,7 +15,7 @@ body{
 }
 #section{
     background-color:darkviolet;
-    height: 45rem;
+    height: auto;
 }
 #section1{
     background-color: #ff4c68;
@@ -100,3 +100,33 @@ section .feature-div{
    }
     
   }
+  @media only screen and (max-width: 335px) {
+    #heading{
+        font-size: 4rem;
+    }
+    .feature-box{
+        padding: 1rem;
+       font-size: 0.8rem;
+    }
+    footer  .container{
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+    footer .f-head{
+        padding: 1rem;
+    }
+    .container1 .row{
+        padding: 1rem;
+    }
+    .f-head > h3{
+        /* font-weight: bold; */
+        font-size: 3rem;
+        font-family: 'Encode Sans', sans-serif;
+   }
+   .row{
+       padding: .5rem;
+   }
+  .toggle-icon{
+    padding: 1rem 20px 1rem 2rem;
+  }
+}

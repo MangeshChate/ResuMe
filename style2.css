@@ -66,8 +66,44 @@ button{
 
 @media only screen and (max-width: 600px) {
     
+    #heading2{
+        font-size: 3.5rem;
+        
+    }
+    .section{
+        height: auto;
+    }
+    .container{
+        height: auto;
+    }
+    
+    .feature-box{
+        padding: 1rem;
+       font-size: 0.8rem;
+    }
+    footer  .container{
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+    footer .f-head{
+        padding: 1rem;
+    }
+    .container1 .row{
+        padding: 1rem;
+    }
     #arrow{
-          display: none;
-      }
+        display: none;
+    }
+    .navbar-toggler{
+        width: 4rem;
+    }
+    .row{
+        padding: .5rem;
+    }
+    .f-head > h3{
+        /* font-weight: bold; */
+        font-size: 3rem;
+        font-family: 'Encode Sans', sans-serif;
     
   }
+}

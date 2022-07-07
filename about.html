@@ -19,6 +19,10 @@
 <style>
     #section {
         background-color:   #5050e0;
+        
+    }
+    #section .container{
+        padding: 1rem;
     }
 
     h3{
@@ -72,15 +76,69 @@
     #section3 {
         background-color: #ff4c68;
     }
-    #nav-brand{
-        font-size: 4rem;
-    }
+    
    .container1{
        background-color: #ff4c68;
        padding: 2rem;
        
     }
+    @media only screen and (max-width: 335px) {
+    #heading{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .container{
+        padding: 0rem;
+    }
+    .photo img{
+        width: 30vh;
+    }
+    .row div div{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        padding: .2rem;
+    }
+    .row div div h2{
+        padding: 1rem;
+    }
+    
+    .feature-box{
+        padding: 1rem;
+       font-size: 0.8rem;
+    }
+    footer  .container{
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+    footer .f-head{
+        padding: 1rem;
+    }
+    .container1 .row{
+        padding: 1rem;
+    }
+    .f-head > h3{
+        /* font-weight: bold; */
+        font-size: 3rem;
+        font-family: 'Encode Sans', sans-serif;
+   }
+   .row{
+       padding: .5rem;
+   }
+   footer{
+       overflow-x: hidden;
+   }
    
+}
 </style>
 
 <body>
@@ -152,7 +210,7 @@
                 <div class="col-lg-6 ">
                     <div>
                         <h3>Jugal Khandre</h3>
-                        <h2 style="color: black;">“In three words I can sum up everything I’ve learned about life: it goes on.”</h2>
+                        <h2 style="color: black;"><span>"</span> In three words I can sum up everything I’ve learned about life: it goes on. <span>"</span></h2>
                         <p>Programmer | Web-Developer | Data Scientist</p>
 
                     </div>
