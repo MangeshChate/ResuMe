@@ -126,7 +126,7 @@ section .feature-div{
    .row{
        padding: .5rem;
    }
-  .toggle-icon{
-    padding: 1rem 20px 1rem 2rem;
+  .toggle-icon > li{
+    padding: 0rem 0rem 0rem 2rem;
   }
 }
